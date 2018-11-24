@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import Home from './components/home';
+import Blog from './components/blog';
 import Layout from './components/layout';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Layout/>
-      </div>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/blog' component={Blog}/>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
