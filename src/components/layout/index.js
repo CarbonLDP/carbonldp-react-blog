@@ -10,6 +10,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import HomeIcon from '@material-ui/icons/Home';
 import ListIcon from '@material-ui/icons/List';
+import CreateIcon from '@material-ui/icons/Create';
 
 const drawerWidth = 240;
 
@@ -56,28 +57,35 @@ class Layout extends React.Component {
     render() {
         const { children, classes, theme } = this.props;
 
-        const drawer = (
-            <div>
-                <Hidden smDown>
-                    <div className={classes.toolbar} />
-                </Hidden>
-                <Divider />
-                <List component="nav">
-                    <ListItem component={NavLink} to="/" button>
-                        <ListItemIcon>
-                            <HomeIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Home" />
-                    </ListItem>
-                    <ListItem component={NavLink} to="/blog" button>
-                        <ListItemIcon>
-                            <ListIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Blog" />
-                    </ListItem>
-                </List>
-            </div>
-        );
+const drawer = (
+    <div>
+        <Hidden smDown>
+            <div className={classes.toolbar} />
+        </Hidden>
+        <Divider />
+        <List component="nav">
+            <ListItem component={NavLink} to="/" button>
+                <ListItemIcon>
+                    <HomeIcon />
+                </ListItemIcon>
+                <ListItemText primary="Home" />
+            </ListItem>
+            <ListItem component={NavLink} to="/blog" button>
+                <ListItemIcon>
+                    <ListIcon />
+                </ListItemIcon>
+                <ListItemText primary="Blog" />
+            </ListItem>
+        </List>
+        <Divider/>
+        <ListItem component={NavLink} to="/blog/posts/new" button>
+            <ListItemIcon>
+                <CreateIcon />
+            </ListItemIcon>
+            <ListItemText primary="New Post" />
+        </ListItem>
+    </div>
+);
 
         return (
             <Fragment>
