@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
+
 import {
     AppBar, CssBaseline, Divider, Drawer, Hidden, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography
 } from '@material-ui/core';
@@ -56,16 +58,18 @@ class Layout extends React.Component {
 
         const drawer = (
             <div>
-                <div className={classes.toolbar} />
+                <Hidden smDown>
+                    <div className={classes.toolbar} />
+                </Hidden>
                 <Divider />
                 <List component="nav">
-                    <ListItem button>
+                    <ListItem component={NavLink} to="/" button>
                         <ListItemIcon>
                             <HomeIcon />
                         </ListItemIcon>
                         <ListItemText primary="Home" />
                     </ListItem>
-                    <ListItem button>
+                    <ListItem component={NavLink} to="/blog" button>
                         <ListItemIcon>
                             <ListIcon />
                         </ListItemIcon>
