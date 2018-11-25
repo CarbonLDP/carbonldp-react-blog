@@ -57,39 +57,39 @@ class Layout extends React.Component {
     render() {
         const { children, classes, theme } = this.props;
 
-const drawer = (
-    <div>
-        <Hidden smDown>
-            <div className={classes.toolbar} />
-        </Hidden>
-        <Divider />
-        <List component="nav">
-            <ListItem component={NavLink} to="/" button>
-                <ListItemIcon>
-                    <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem component={NavLink} to="/blog" button>
-                <ListItemIcon>
-                    <ListIcon />
-                </ListItemIcon>
-                <ListItemText primary="Blog" />
-            </ListItem>
-        </List>
-        <Divider/>
-        <ListItem component={NavLink} to="/blog/posts/new" button>
-            <ListItemIcon>
-                <CreateIcon />
-            </ListItemIcon>
-            <ListItemText primary="New Post" />
-        </ListItem>
-    </div>
-);
+        const drawer = (
+            <div>
+                <Hidden smDown>
+                    <div className={classes.toolbar} />
+                </Hidden>
+                <Divider />
+                <List component="nav">
+                    <ListItem component={NavLink} to="/" button>
+                        <ListItemIcon>
+                            <HomeIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Home" />
+                    </ListItem>
+                    <ListItem component={NavLink} to="/blog" button>
+                        <ListItemIcon>
+                            <ListIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Blog" />
+                    </ListItem>
+                </List>
+                <Divider />
+                <ListItem component={NavLink} to="/blog/posts/new" button>
+                    <ListItemIcon>
+                        <CreateIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="New Post" />
+                </ListItem>
+            </div>
+        );
 
         return (
             <Fragment>
-                <CssBaseline/>
+                <CssBaseline />
                 <div className={classes.root}>
                     <AppBar className={classes.appBar} position="absolute">
                         <Toolbar>
@@ -103,7 +103,7 @@ const drawer = (
                             </IconButton>
                             <Typography variant="h6" color="inherit" noWrap>
                                 Carbon LDP / React Blog Engine
-            </Typography>
+                            </Typography>
                         </Toolbar>
                     </AppBar>
                     <Hidden mdUp>

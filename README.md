@@ -1,3 +1,11 @@
+# Carbon LDP React Blog Engine - Tutorial Code
+
+This is the source code compliment to the tutorial series on how to **Build a blog with Carbon LDP and React**. 
+In this tutorial series we demonstrate how to build a simple blog engine with Carbon LDP v5 as our data layer and React components 
+for the the user interface. You can find the actual tutorial here:
+
+- [Part 1](https://carbonldp.com/blog/2018/11/23/build-a-blog-with-carbon-ldp-and-react-part-1/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

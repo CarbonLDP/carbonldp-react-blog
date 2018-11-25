@@ -2,6 +2,10 @@ import React, {Component} from 'react'
 import {withStyles} from '@material-ui/core/styles'
 import {Button, TextField} from '@material-ui/core'
 
+import {CarbonLDP} from "carbonldp/CarbonLDP";
+
+let carbonldp = new CarbonLDP("http://localhost:8083");
+
 const styles = theme => ({
     FormControl: {
         width: 500
@@ -60,7 +64,15 @@ class Editor extends Component {
         // TO DO: validate form
 
         let blogPost = {...this.state.post};
-        // save blogPost here...
+
+        carbonldp.documents.$create("posts/", blogPost, blogPost.slug).then(
+            (blogPost) => {
+                // JavaScript object is now saved in Carbon; log the document's minted URI...
+                console.log(blogPost.$id);
+                let post = {...this.state.post, $id: blogPost.$id};
+                this.setState({post});
+            }
+        ).catch(error => console.error(error));
 
     }
 
