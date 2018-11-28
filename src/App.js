@@ -5,6 +5,7 @@ import Blog from './components/blog';
 import Layout from './components/layout';
 import './App.css';
 import Editor from './components/editor';
+import BlogDetail from './components/blog-detail';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
             <Route exact path='/' component={Home} />
             <Route exact path='/blog' component={Blog}/>
             <Route path='/blog/posts/new' component={Editor}/>
+            <Route path="/:slug" component={BlogDetail}/>
           </Switch>
         </Layout>
       </BrowserRouter>
