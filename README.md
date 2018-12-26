@@ -5,8 +5,17 @@ In this tutorial series we demonstrate how to build a simple blog engine with Ca
 for the the user interface. You can find the actual tutorial here:
 
 - [Part 1](https://carbonldp.com/blog/2018/11/23/build-a-blog-with-carbon-ldp-and-react-part-1/)
+- [Part 2](https://carbonldp.com/blog/2018/11/25/build-a-blog-with-carbon-ldp-and-react-part-2/)
+- [Part 3](https://carbonldp.com/blog/2018/11/26/build-a-blog-with-carbon-ldp-and-react-part-3/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Developer getting started
+
+- Review the tutorial series found at the links above
+- Clone this repo: https://github.com/CarbonLDP/carbonldp-react-blog
+- Change into the project directory and run `npm install` to install package dependencies.
+- Run `npm start` to start the app in development mode (requires Carbon LDP setup steps described in [Part 2](https://carbonldp.com/blog/2018/11/25/build-a-blog-with-carbon-ldp-and-react-part-2/) of the tutorial series)
 
 ## Available Scripts
 
